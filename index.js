@@ -34,6 +34,11 @@ tweetBtn.addEventListener('click', function() {
 			</div>`
 });
 
+function resetField() {
+	tweetInput.value = '';
+	
+}
+
 
 tweetInput.addEventListener('input', function() {
 	max_value = 140 - tweetInput.value.length;
@@ -41,11 +46,11 @@ tweetInput.addEventListener('input', function() {
 	
 	if (max_value < 0) {
 		charRemaining.style.color = 'red';
-
 		tweetBtn.disabled = true;
 	} else {
 		
 		charRemaining.style.color = 'black';
+		tweetBtn.disabled = false;
 	}
 
 });
