@@ -13,8 +13,8 @@ let tweetListArr = [{
     content: 'It’s not too late to get moving for #heartmonth! Thanks to everyone who joined our #TodayatApple Health & Fitness Walk in Brooklyn yesterday. #closeyourrings',
     publishAt: '11:49 AM - 22 Feb 2019',
     retweetId: '',
-    like: '2900',
-    retweetTimes: '302',
+    like: 2900,
+    retweetTimes: 302,
     imageUrl: 'https://pbs.twimg.com/media/D1KPPOqU0AAEoVX.jpg'
 },
 {
@@ -26,8 +26,8 @@ let tweetListArr = [{
     content: 'I love Pi-loi team',
     publishAt: '11:49 AM - 22 Feb 2019',
     retweetId: '',
-    like: '5000',
-    retweetTimes: '582',
+    like: 5000,
+    retweetTimes: 582,
     imageUrl: 'https://pbs.twimg.com/media/D1H_sjeUYAAvi7-.jpg'
 }];
 
