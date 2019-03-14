@@ -22,11 +22,9 @@ let updateTweetList = () => {
 
 }
 updateTweetList(); 
-
 let like = (id) => {
     let likeBtn = document.getElementById(`like-btn-${id}`);
     tweetListArr.forEach((tws) => {
-
         if (tws.id === id) {
             if (likeBtn.classList.value.indexOf('liked') < 0) {
                 tws.like += 1;
