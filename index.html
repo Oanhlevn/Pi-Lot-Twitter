@@ -5,6 +5,12 @@
 	<title> Mini Project - Twitter </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta charset="utf-8">
+	 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" href="/resources/demos/style.css">
+
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
@@ -42,7 +48,7 @@
 							<p id='body'></p>
 
 							<ul class="nav nav-pills nav-pills-custom">
-								<a href="#"><span class="glyphicon glyphicon-retweet"></span></a>
+								<a href="#"><span class="glyphicon glyphicon-retweet" id="retweet-btn"></span></a>
 								<a href="#"><span class="glyphicon glyphicon-like" id="like-btn" ></span></a>
 								<a href="#" style="color:red" id="delete-btn"><span class="glyphicon glyphicon-delete"></span></a>
 							</ul>
@@ -56,11 +62,17 @@
 			<br>
 			<br>
 		</div>
-		<div class="col-sm-3"></div></div></div>	</main>
+		
+		<div id="myModal" class="modal">
 
-
-
-
+			<!-- Modal content -->
+			<div class="modal-content">
+			  <span class="close">&times;</span>
+			  <p>Some text in the Modal..</p>
+			</div>
+		  
+		  </div>
+		
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -72,6 +84,10 @@
 
 	<script type="text/javascript" src="js/textfield.js"></script>
 	<script type="text/javascript" src="js/likefeature.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
 	
 </body>
 

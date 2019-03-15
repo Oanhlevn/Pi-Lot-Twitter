@@ -2,6 +2,8 @@ var tweetInput = document.getElementById('tweet-input');
 var charRemaining = document.getElementById('char-remaining');
 var tweetBtn = document.getElementById('tweet-btn');
 var tweetList = document.getElementById('tweet-list');
+var retweetBox = document.getElementById('dialog');
+
 
 var max_value;
 let tweetListArr = [{
@@ -32,6 +34,7 @@ let tweetListArr = [{
 }];
 
 tweetBtn.addEventListener('click', function () {
+    charRemaining.innerHTML = 140 + " Characters Remaining";
     let newTwsid = parseInt(getLastedId()) + 1;
     tweetList.innerHTML += `
     <div class="panel-body" id="tweets-list-${newTwsid}">
@@ -64,6 +67,7 @@ tweetBtn.addEventListener('click', function () {
         retweetTimes: 0,
         imageUrl: ''
     })
+    tweetInput.value = "";
 });
 
 function resetField() {
