@@ -2,6 +2,8 @@ var tweetInput = document.getElementById('tweet-input');
 var charRemaining = document.getElementById('char-remaining');
 var tweetBtn = document.getElementById('tweet-btn');
 var tweetList = document.getElementById('tweet-list');
+var retweetBox = document.getElementById('dialog');
+
 
 var max_value;
 let tweetListArr = [{
@@ -29,10 +31,24 @@ let tweetListArr = [{
     like: 5000,
     retweetTimes: 582,
     imageUrl: 'https://pbs.twimg.com/media/D1H_sjeUYAAvi7-.jpg'
+}, {
+    id: 3,
+    user: {
+        name: 'Minh Thang',
+        avartar: 'https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_bigger.jpg'
+    },
+    content: 'Wowwwwww!!!',
+    publishAt: '11:49 AM - 22 Feb 2019',
+    retweetId: 1,
+    like: 5000,
+    retweetTimes: 582,
+    imageUrl: 'https://pbs.twimg.com/media/D1H_sjeUYAAvi7-.jpg'
 }];
 
 tweetBtn.addEventListener('click', function () {
-    let newTwsid = parseInt(getLastedId()) + 1; 
+    charRemaining.innerHTML = 140 + " Characters Remaining";
+    let newTwsid = parseInt(getLastedId()) + 1;
+    console.log(tweetInput.value)
     tweetList.innerHTML += `
     <div class="panel-body" id="tweets-list-${newTwsid}">
         <div class="media">
@@ -41,9 +57,9 @@ tweetBtn.addEventListener('click', function () {
             </a>
             <div class="media-body">
                  <p id='body'>${insertHashtag(tweetInput.value)}</p>
-
+       
                 <ul class="nav nav-pills nav-pills-custom">
-                    <li> <a id="retweet-btn" href="#"><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
+                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
                     <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"><span class="glyphicon glyphicon-star"> 0 Like</span></a> </li>
                     <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
                 </ul>
@@ -64,13 +80,8 @@ tweetBtn.addEventListener('click', function () {
         retweetTimes: 0,
         imageUrl: ''
     })
+    tweetInput.value = "";
 });
-
-function resetField() {
-    tweetInput.value = '';
-
-}
-
 
 tweetInput.addEventListener('input', function () {
     max_value = 140 - tweetInput.value.length;
