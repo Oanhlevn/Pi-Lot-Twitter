@@ -48,7 +48,6 @@ let updateTweetList = () => {
             </a>
             <div class="media-body">
                  <p id='body'>${tws.content}</p>
-
                 <ul class="nav nav-pills nav-pills-custom">
                     <li> <a id="retweet-btn" href="#"><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
                     <li> <a id="like-btn-${tws.id}" onclick="likeTws(${tws.id})" href="#"><span class="glyphicon glyphicon-star"> ${tws.like} Like</span></a> </li>
@@ -90,3 +89,4 @@ let deleteTws = (id) => {
         });
     }
 };
+
