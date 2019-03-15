@@ -38,7 +38,7 @@ tweetBtn.addEventListener('click', function () {
 							<img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png">
 						</a>
 						<div class="media-body">
-							<p id='body'>${tweetInput.value}</p>
+							<p id='body'>${insertHashtag(tweetInput.value)}</p>
 
 							<ul class="nav nav-pills nav-pills-custom">
 								<li> <a id="retweet-btn" href="#"><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
