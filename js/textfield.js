@@ -58,7 +58,7 @@ tweetBtn.addEventListener('click', function () {
                  <p id='body'>${tweetInput.value}</p>
 
                 <ul class="nav nav-pills nav-pills-custom">
-                    <li> <a id="retweet-btn-${tws.id}" onclick="reTws(${tws.id})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
+                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
                     <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"><span class="glyphicon glyphicon-star"> 0 Like</span></a> </li>
                     <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
                 </ul>
