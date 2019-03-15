@@ -68,8 +68,7 @@ let likeTws = (id) => {
                 tws.like += 1;
                 likeBtn.classList.toggle('liked');
                 likeBtn.innerHTML = `<span class="glyphicon glyphicon-star"> ${tws.like} Liked</span>`;
-            }
-            else {
+            } else {
                 tws.like -= 1;
                 likeBtn.classList.toggle('liked');
                 likeBtn.innerHTML = `<span class="glyphicon glyphicon-star"> ${tws.like} Like</span>`;
