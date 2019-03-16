@@ -48,15 +48,16 @@ let tweetListArr = [{
 tweetBtn.addEventListener('click', function () {
     charRemaining.innerHTML = 140 + " Characters Remaining";
     let newTwsid = parseInt(getLastedId()) + 1;
+    console.log(tweetInput.value)
     tweetList.innerHTML += `
     <div class="panel-body" id="tweets-list-${newTwsid}">
         <div class="media">
             <a class="media-left" href="#fake">
-                <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png">
+                <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png"> 
             </a>
             <div class="media-body">
-                 <p id='body'>${tweetInput.value}</p>
-
+                 <p id='body'>${insertHashtag(tweetInput.value)}</p>
+       
                 <ul class="nav nav-pills nav-pills-custom">
                     <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
                     <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"><span class="glyphicon glyphicon-star"> 0 Like</span></a> </li>
