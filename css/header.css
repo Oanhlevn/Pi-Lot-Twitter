@@ -1,3 +1,5 @@
+body{
+    background: #e6ecf0;}
 #logo{
     background-image: url('../images/pi-lot-logo.png');
     width: 50px;
@@ -32,7 +34,7 @@ header {
 
 }
 
-#trends ul{
+ul{
     list-style: none;
     padding-left:10px; 
 }
