@@ -14,19 +14,25 @@
 
 //let tweetInput = document.getElementById("tweet-input").value; 
 function insertHashtag(string)
-{  if (string.indexOf("#")==-1)
+ { let link =""; 
+  if ( string.indexOf("#")==-1 && string.indexOf("https:")==-1 )
   { return string; }
   else
 { let content = string.split(" "); 
 console.log(content); 
- console.log(content.map(word => {
-   if (word.startsWith("#"))
+console.log (content.map((word,id,arr) => {
+  if (word.startsWith("#"))
    { return (`<a href='#' onclick =filterHashtag('${word}')> ${word} </a>`); }
+  if (word.startsWith("https:"))
+  { link = word;
+  return (`<a href='${word}'> ${word} </a>`) ; }
    else {return word; }
- }).join(" "));
-
-} }
-
+ }).join(" ").concat(`<img src='${link}' width='100%'>`).toString());
+ 
+}
+ 
+}
+ 
 //  {let index1 = string.indexOf("#"); 
 //  let string1 = string.slice (0,index1); 
 //  let string2= string.substring(index1); 
@@ -44,6 +50,8 @@ function filterHashtag(hashtag)
    document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.add("d-none"); 
  }
 }
+
+
 
 
 //insertHashtag(tweetInput); 
