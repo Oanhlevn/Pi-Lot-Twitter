@@ -58,7 +58,7 @@ tweetBtn.addEventListener('click', function () {
             </a>
             <div class="media-body">
             <p id='body'>${insertHashtag(tweetInput.value)}</p>
-            <p id='body'>${moment(d).fromNow()}</p>
+            <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
                     <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
                     <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"> Like <span class="glyphicon glyphicon-star"></span></a> </li>
