@@ -3,7 +3,7 @@
 
 Created with love by: Pi-Lot team: Minh Thắng, Hoàng Oanh, Hồng Lộc 
 
-View online at: 
+View online at: https://romantic-noether-d892ca.netlify.com/
   
 This is a microblogging platform inspired by Twitter.  
 

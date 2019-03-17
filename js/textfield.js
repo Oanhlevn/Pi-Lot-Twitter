@@ -57,6 +57,7 @@ tweetBtn.addEventListener('click', function () {
                 <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png"> 
             </a>
             <div class="media-body">
+            <b> Pilot Team </b>  @pilotTeam 
             <p id='body'>${insertHashtag(tweetInput.value)}</p>
             <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
@@ -97,7 +98,7 @@ tweetInput.addEventListener('input', function () {
         charRemaining.style.color = 'black';
         tweetBtn.disabled = false;
     }
-
+    
 });
 
 let getLastedId = () => {
