@@ -45,8 +45,35 @@ ul{
     line-height: 18px;
     flex-wrap: wrap;
 }
+
 .Footer-link, .copyright{
     color: #657786;
     padding-right: 8px;
     font-size: 12px;
+}
+.name a{
+    color: black;
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+#followbtn a {
+    font-size: 13px;
+    text-align: center;
+    padding: 7px 20px;
+    border: 1px solid #1DA1F2;
+    border-radius: 25px;
+    font-weight:600;
+    text-decoration: none;
+}
+
+#followbtn a:hover{
+    background-color: #E8F5FD;
+}
+    
+a{
+    text-decoration: none;
 }
