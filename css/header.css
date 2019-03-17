@@ -1,3 +1,5 @@
+body{
+    background: #e6ecf0;}
 #logo{
     background-image: url('../images/pi-lot-logo.png');
     width: 50px;
@@ -9,13 +11,14 @@ header {
     background: #007bff;
 }
 
-#profile{
+#profile, #trends, #avatar, #footer, #followthem {
     background: white;
 }
 
 #cover{
     height:100px;
-    background: #007bff;
+    background-image: url('../images/cover_photo.jpg');
+    background-size: cover;
 
 }
 
@@ -26,17 +29,51 @@ header {
     top: -40px;
     left:  8px;
     background: white;
-}
-#trends{
-    background: white;
-
+    border: 5px solid white;
 }
 
-#trends ul{
+ul{
     list-style: none;
     padding-left:10px; 
 }
 
 #trends ul a{
     font-weight: bold;
+}
+#footer ul{
+    display: flex;
+    line-height: 18px;
+    flex-wrap: wrap;
+}
+
+.Footer-link, .copyright{
+    color: #657786;
+    padding-right: 8px;
+    font-size: 12px;
+}
+.name a{
+    color: black;
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+#followbtn a {
+    font-size: 13px;
+    text-align: center;
+    padding: 7px 20px;
+    border: 1px solid #1DA1F2;
+    border-radius: 25px;
+    font-weight:600;
+    text-decoration: none;
+}
+
+#followbtn a:hover{
+    background-color: #E8F5FD;
+}
+    
+a{
+    text-decoration: none;
 }

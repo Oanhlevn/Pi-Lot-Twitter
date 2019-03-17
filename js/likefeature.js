@@ -11,6 +11,7 @@ let updateTweetList = () => {
                 <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png">
             </a>
             <div class="media-body">
+            <b> Pilot Team </b>  @pilotTeam 
                  <p id='body'>${tws.content}</p>
                  <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
@@ -34,6 +35,7 @@ updateRetweet = (retweetValue, tweetValue) => {
                 <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png">
             </a>
             <div class="media-body">
+            <b> Pilot Team </b>  @pilotTeam 
                 <p> ${tweetValue} </p>
                  <p id='body' class='border rounded'> ${retweetValue.content}</p>
                  <p class="font-italic" id='body'>${moment(d).fromNow()}</p>

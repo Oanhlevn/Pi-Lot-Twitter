@@ -58,9 +58,9 @@ function filterHashtag(hashtag) {
 }
 
 
-let userarr = [{name:"HoangOanh",avata:"" }, {name:"MinhThang",avata:""}, {name:"HongLoc", avata:""} ];
-function addUser(userar)
-{ 
- return  document.getElementById("username").innerHTML += userar.map((user,i) =>{return `<div id=${user}> <a href=#> ${userar[i].name} </a></div>` } ).join(" ");
-}
-addUser(userarr); 
+// let userarr = [{name:"HoangOanh",avata:"" }, {name:"MinhThang",avata:""}, {name:"HongLoc", avata:""} ];
+// function addUser(userar)
+// { 
+//  return  document.getElementById("username").innerHTML += userar.map((user,i) =>{return `<div id=${user}> <a href=#> ${userar[i].name} </a></div>` } ).join(" ");
+// }
+// addUser(userarr); 
