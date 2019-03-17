@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> Mini Project - Twitter </title>
+	<link rel="stylesheet" href="./Mini Project - Twitter_files/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.css">
+	<link rel="stylesheet" type="text/css" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/css/header.css">
+</head>
+
+<body class="bg-light">
+	<header class="mb-2">
+		<div class="container">
+			<div class="row text-center">
+				<a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#" id="logo" class="my-1 mx-auto"></a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div id="profile" class="mb-3">
+						<div id="cover"></div>
+						<div id="avatar" class="position-relative">
+							<img src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/images/human.png" class="position-absolute" alt="">
+						</div>
+						<div id="info" class="text-center">
+							<div><strong>Pilot man</strong><br><small>@pilot</small></div>
+							<div class="d-flex justify-content-around mt-1">
+								<p> Tweets <br>
+									<strong>1</strong></p>
+								<p>Following <br>
+									<strong>1000</strong></p>
+							</div>
+						</div>
+					</div>
+					<div id="trends" class="p-2">
+						<p><strong>Trends for you</strong></p>
+						<ul>
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+							
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+							<li><small> <a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#">#윤기_멋대로_살아_전부_니꺼야</a> <br>
+									<span class="text-muted"> 1,178 Tweets</span>
+								</small> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<div class="media">
+								<a class="media-left" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#fake">
+									<img alt="" class="media-object-img-rounded" height="30px" width="30px" src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/images/human.png">
+								</a>
+								<div class="media-body">
+									<div class="form-group has-feedback has-error">
+
+
+										<textarea rows="3" cols="50" type="text" class="form-control" id="tweet-input"></textarea>
+										<div class="container">
+											<div class="row">
+												<div class="col-9">
+													<div class="rem" id="char-remaining"> 140 Characters Remaining </div>
+
+												</div>
+												<div class="col-3 mr-0 px-0 mt-2">
+													<div class="">
+													<button class="btn btn-block pull-right btn-info" id="tweet-btn"> Tweet </button>
+												</div>
+												</div>
+											</div>
+										</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							
+
+						<div class="panel-body" id="tweet-list">
+							<div class="media">
+								<a class="media-left" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#fake">
+
+								</a>
+								<div class="media-body">
+									<p id="body"></p>
+
+									<ul class="nav nav-pills nav-pills-custom">
+										<a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-retweet"></span></a>
+										<a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-like" id="like-btn"></span></a>
+										<a href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#" style="color:red" id="delete-btn"><span class="glyphicon glyphicon-delete"></span></a>
+									</ul>
+								</div>
+
+							</div>
+						
+    <div class="panel-body .bg-black" id="tweets-list-1">
+        <div class="media">
+            <a class="media-left" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#fake">
+                <img alt="" class="media-object-img-rounded" height="30px" width="30px" src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/images/human.png">
+            </a>
+            <div class="media-body">
+                 <p id="body">It’s not too late to get moving for #heartmonth! Thanks to everyone who joined our #TodayatApple Health &amp; Fitness Walk in Brooklyn yesterday. #closeyourrings</p>
+                <ul class="nav nav-pills nav-pills-custom">
+                    <li> <a id="retweet-btn-1" onclick="reTws(1)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
+                    <li> <a id="like-btn-1" onclick="likeTws(1)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-star"> 2900 Like</span></a> </li>
+                    <li> <a id="delete-btn-1" onclick="deleteTws(1)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body" id="tweets-list-2">
+        <div class="media panel panel-default">
+            <a class="media-left" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#fake">
+                <img alt="" class="media-object-img-rounded" height="30px" width="30px" src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/images/human.png">
+            </a>
+            <div class="media-body">
+                 <p id="body">I love Pi-loi team</p>
+                <ul class="nav nav-pills nav-pills-custom">
+                    <li> <a id="retweet-btn-2" onclick="reTws(2)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
+                    <li> <a id="like-btn-2" onclick="likeTws(2)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-star"> 5000 Like</span></a> </li>
+                    <li> <a id="delete-btn-2" onclick="deleteTws(2)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
+                </ul>
+            </div>
+        </div>
+    <div class="panel-body" id="tweets-list-3">
+        <div class="media">
+            <a class="media-left" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#fake">
+                <img alt="" class="media-object-img-rounded" height="30px" width="30px" src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/images/human.png">
+            </a>
+            <div class="media-body">
+                 <p id="body">Wowwwwww!!!</p>
+                <ul class="nav nav-pills nav-pills-custom">
+                    <li> <a id="retweet-btn-3" onclick="reTws(3)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
+                    <li> <a id="like-btn-3" onclick="likeTws(3)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#"><span class="glyphicon glyphicon-star"> 5000 Like</span></a> </li>
+                    <li> <a id="delete-btn-3" onclick="deleteTws(3)" href="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/index.html#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
+                </ul>
+            </div>
+        </div>
+    </div></div>
+    </div>
+					</div>
+
+				</div>
+				<div class="col-sm-3">
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="./Mini Project - Twitter_files/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="./Mini Project - Twitter_files/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="./Mini Project - Twitter_files/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/js/textfield.js"></script>
+	<script type="text/javascript" src="file:///Users/hongloc/Downloads/Fullstack/Front-end/Week%203/Mini%20Projects/Pi-Lot-Twitter/js/likefeature.js"></script>
+
+
+
+</body></html>

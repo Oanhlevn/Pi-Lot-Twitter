@@ -1,20 +1,23 @@
 var retweetBox = document.getElementById('dialog');
+var d = new Date();
 
 let updateTweetList = () => {
     tweetListArr.forEach(tws => {
         console.log(tws);
         tweetList.innerHTML += `
-    <div class="panel-body" id="tweets-list-${tws.id}">
+    <div class="panel panel-body border rounded" id="tweets-list-${tws.id}">
         <div class="media">
             <a class="media-left" href="#fake">
                 <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png">
             </a>
             <div class="media-body">
                  <p id='body'>${tws.content}</p>
+                 <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
-                    <li> <a id="retweet-btn-${tws.id}" onclick="reTws(${tws.id})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
-                    <li> <a id="like-btn-${tws.id}" onclick="likeTws(${tws.id})" href="#"><span class="glyphicon glyphicon-star"> ${tws.like} Like</span></a> </li>
-                    <li> <a id="delete-btn-${tws.id}" onclick="deleteTws(${tws.id})" href="#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
+                
+                    <li> <a id="retweet-btn-${tws.id}" onclick="reTws(${tws.id})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
+                    <li> <a id="like-btn-${tws.id}" onclick="likeTws(${tws.id})" href="#"> Like <span class="glyphicon glyphicon-star"> ${tws.like}</span></a> </li>
+                    <li> <a id="delete-btn-${tws.id}" onclick="deleteTws(${tws.id})" href="#" style="color:red"> Delete <span class="glyphicon glyphicon-remove"></span></a> </li>
                 </ul>
             </div>
         </div>
@@ -25,18 +28,19 @@ let updateTweetList = () => {
 updateRetweet = (retweetValue, tweetValue) => {
     let newTwsid = parseInt(getLastedId()) + 1;
     tweetList.innerHTML += `
-    <div class="panel-body" id="tweets-list-${newTwsid}">
+    <div class="panel panel-body border boder-radius=5" id="tweets-list-${newTwsid}">
         <div class="media">
             <a class="media-left" href="#fake">
                 <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png">
             </a>
             <div class="media-body">
                 <p> ${tweetValue} </p>
-                 <p id='body'> ${retweetValue.content}</p>
+                 <p id='body' class='border rounded '> ${retweetValue.content}</p>
+                 <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
-                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
-                    <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"><span class="glyphicon glyphicon-star"> 0 Like</span></a> </li>
-                    <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
+                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
+                    <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"> Like <span class="glyphicon glyphicon-star"> 0 Like </span></a> </li>
+                    <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"> Delete <span class="glyphicon glyphicon-remove"></span></a> </li>
                 </ul>
             </div>
         </div>
@@ -77,11 +81,11 @@ let likeTws = (id) => {
             if (likeBtn.classList.value.indexOf('liked') < 0) {
                 tws.like += 1;
                 likeBtn.classList.toggle('liked');
-                likeBtn.innerHTML = `<span class="glyphicon glyphicon-star"> ${tws.like} Liked</span>`;
+                likeBtn.innerHTML = ` Unlike <span class="glyphicon glyphicon-star"> ${tws.like} </span>`;
             } else {
                 tws.like -= 1;
                 likeBtn.classList.toggle('liked');
-                likeBtn.innerHTML = `<span class="glyphicon glyphicon-star"> ${tws.like} Like s</span>`;
+                likeBtn.innerHTML = ` Like <span class="glyphicon glyphicon-star"> ${tws.like} </span>`;
             }
         }
     });

@@ -15,7 +15,7 @@ let tweetListArr = [{
     content: 'It’s not too late to get moving for #heartmonth! Thanks to everyone who joined our #TodayatApple Health & Fitness Walk in Brooklyn yesterday. #closeyourrings',
     publishAt: '11:49 AM - 22 Feb 2019',
     retweetId: '',
-    like: 2900,
+    like: 10,
     retweetTimes: 302,
     imageUrl: 'https://pbs.twimg.com/media/D1KPPOqU0AAEoVX.jpg'
 },
@@ -28,7 +28,7 @@ let tweetListArr = [{
     content: 'I love Pi-loi team',
     publishAt: '11:49 AM - 22 Feb 2019',
     retweetId: '',
-    like: 5000,
+    like: 11,
     retweetTimes: 582,
     imageUrl: 'https://pbs.twimg.com/media/D1H_sjeUYAAvi7-.jpg'
 }, {
@@ -40,7 +40,7 @@ let tweetListArr = [{
     content: 'Wowwwwww!!!',
     publishAt: '11:49 AM - 22 Feb 2019',
     retweetId: 1,
-    like: 5000,
+    like: 12,
     retweetTimes: 582,
     imageUrl: 'https://pbs.twimg.com/media/D1H_sjeUYAAvi7-.jpg'
 }];
@@ -50,20 +50,22 @@ tweetBtn.addEventListener('click', function () {
     let newTwsid = parseInt(getLastedId()) + 1;
     console.log(tweetInput.value)
     tweetList.innerHTML += `
+    <div class="panel panel-default">
     <div class="panel-body" id="tweets-list-${newTwsid}">
         <div class="media">
             <a class="media-left" href="#fake">
                 <img alt="" class="media-object-img-rounded" height = 30px width = 30px src="images/human.png"> 
             </a>
             <div class="media-body">
-                 <p id='body'>${insertHashtag(tweetInput.value)}</p>
-       
+            <p id='body'>${insertHashtag(tweetInput.value)}</p>
+            <p id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
-                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" ><span class="glyphicon glyphicon-retweet"> Retweet </span></a> </li>
-                    <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"><span class="glyphicon glyphicon-star"> 0 Like</span></a> </li>
-                    <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"><span class="glyphicon glyphicon-delete"> Delete </span></a> </li>
+                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
+                    <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"> Like <span class="glyphicon glyphicon-star"></span></a> </li>
+                    <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"> Remove <span class="glyphicon glyphicon-remove"></span></a> </li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>`
 
@@ -101,3 +103,4 @@ tweetInput.addEventListener('input', function () {
 let getLastedId = () => {
     return tweetListArr[tweetListArr.length - 1].id;
 }
+

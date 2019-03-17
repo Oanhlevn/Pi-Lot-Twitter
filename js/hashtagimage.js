@@ -13,19 +13,28 @@
 // }]
 
 //let tweetInput = document.getElementById("tweet-input").value; 
-function insertHashtag(string)
-{  if (string.indexOf("#")==-1)
-  { return string; }
-  else
-{ let content = string.split(" "); 
-console.log(content); 
- console.log(content.map(word => {
-   if (word.startsWith("#"))
-   { return (`<a href='#' onclick =filterHashtag('${word}')> ${word} </a>`); }
-   else {return word; }
- }).join(" "));
+function insertHashtag(string) {
+  let link = "";
+  if (string.indexOf("#") == -1 && string.indexOf("https:") == -1) {
+    return string;
+  } else {
+    let content = string.split(" ");
+    console.log(content);
+   return content.map(word => {
+      if (word.startsWith("#")) {
+        return (`<a href='#' onclick =filterHashtag('${word}')> ${word} </a>`);
+      }
+      if (word.startsWith("https:")) {
+        link = word;
+        return (`<a href='${word}'> ${word} </a>`);
+      } else {
+        return word;
+      }
+    }).join(" ").concat(`<img src='${link}' width='100%'>`).toString();
 
-} }
+  }
+
+}
 
 //  {let index1 = string.indexOf("#"); 
 //  let string1 = string.slice (0,index1); 
@@ -37,16 +46,12 @@ console.log(content);
 //   return (string1 + "<a href='#' onclick =filterHashtag("+"'" + string21 +"'" +")>" + string21 + "</a>" + string4) ; 
 // }} 
 
-function filterHashtag(hashtag)
-{   
- for (i=0; i<tweetListArr.length; i++ )
- { if (!tweetListArr[i].content.includes(hashtag))
-   document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.add("d-none"); 
- }
+function filterHashtag(hashtag) {
+  for (i = 0; i < tweetListArr.length; i++) {
+    if (!tweetListArr[i].content.includes(hashtag))
+      document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.add("d-none");
+  }
 }
-
-
-//insertHashtag(tweetInput); 
 
 
 
