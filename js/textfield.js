@@ -103,3 +103,4 @@ tweetInput.addEventListener('input', function () {
 let getLastedId = () => {
     return tweetListArr[tweetListArr.length - 1].id;
 }
+
