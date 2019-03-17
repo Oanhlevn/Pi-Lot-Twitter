@@ -35,7 +35,7 @@ updateRetweet = (retweetValue, tweetValue) => {
             </a>
             <div class="media-body">
                 <p> ${tweetValue} </p>
-                 <p id='body' class='border rounded '> ${retweetValue.content}</p>
+                 <p id='body' class='border rounded'> ${retweetValue.content}</p>
                  <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
                     <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
