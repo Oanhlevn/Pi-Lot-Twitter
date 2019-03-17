@@ -97,7 +97,7 @@ tweetInput.addEventListener('input', function () {
         charRemaining.style.color = 'black';
         tweetBtn.disabled = false;
     }
-
+    
 });
 
 let getLastedId = () => {
