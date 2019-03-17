@@ -37,7 +37,7 @@ updateRetweet = (retweetValue, tweetValue) => {
             <div class="media-body">
             <b> Pilot Team </b>  @pilotTeam 
                 <p> ${tweetValue} </p>
-                 <p id='body' class='border rounded'> ${retweetValue.content}</p>
+                 <p id='body' class='border rounded'> ${insertHashtag(retweetValue.content)}</p>
                  <p class="font-italic" id='body'>${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
                     <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
@@ -72,7 +72,7 @@ let reTws = (id) => {
     if (retweetValue == null) {
         return false;
     }
-    updateRetweet(tws[0], retweetValue);
+    updateRetweet(tws[0], insertHashtag(retweetValue));
 }
 
 

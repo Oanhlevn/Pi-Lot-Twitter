@@ -53,6 +53,8 @@ function filterHashtag(hashtag) {
     if (!tweetListArr[i].content.includes(hashtag))
 
       document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.add("d-none");
+    else
+    (document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.remove("d-none") ); 
 
   }
 }
