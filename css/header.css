@@ -11,13 +11,14 @@ header {
     background: #007bff;
 }
 
-#profile{
+#profile, #trends, #avatar, #footer, #followthem {
     background: white;
 }
 
 #cover{
     height:100px;
-    background: #007bff;
+    background-image: url('../images/cover_photo.jpg');
+    background-size: cover;
 
 }
 
@@ -28,10 +29,7 @@ header {
     top: -40px;
     left:  8px;
     background: white;
-}
-#trends{
-    background: white;
-
+    border: 5px solid white;
 }
 
 ul{
@@ -41,4 +39,14 @@ ul{
 
 #trends ul a{
     font-weight: bold;
+}
+#footer ul{
+    display: flex;
+    line-height: 18px;
+    flex-wrap: wrap;
+}
+.Footer-link, .copyright{
+    color: #657786;
+    padding-right: 8px;
+    font-size: 12px;
 }
