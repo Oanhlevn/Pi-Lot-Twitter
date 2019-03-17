@@ -1,4 +1,4 @@
-trendHashList = document.getElementById("trends");
+trendHashList = document.querySelector("#trends ul");
 hashtagarr = [];
 
 function insertHashtag(string) {
@@ -53,6 +53,8 @@ function filterHashtag(hashtag) {
     if (!tweetListArr[i].content.includes(hashtag))
 
       document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.add("d-none");
+    else
+    (document.getElementById(`tweets-list-${tweetListArr[i].id}`).classList.remove("d-none") ); 
 
   }
 }

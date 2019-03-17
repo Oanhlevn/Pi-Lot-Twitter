@@ -35,6 +35,7 @@ header {
 ul{
     list-style: none;
     padding-left:10px; 
+    font-size: 85%
 }
 
 #trends ul a{
@@ -57,13 +58,13 @@ ul{
     color: black;
 }
 .avatar{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border: 5px solid white;
     border-radius: 50%;
     padding: 7px
 }
-#followbtn a {
+.followbtn a {
     font-size: 13px;
     text-align: center;
     padding: 7px 20px;
@@ -73,10 +74,18 @@ ul{
     text-decoration: none;
 }
 
-#followbtn a:hover{
+.followbtn a:hover{
     background-color: #E8F5FD;
 }
     
 a{
     text-decoration: none;
+}
+
+#tweet-list .avatar{
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    padding: 0;
 }
