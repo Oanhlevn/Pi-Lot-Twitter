@@ -89,3 +89,8 @@ a{
     border: none;
     padding: 0;
 }
+
+#tweet-list a {
+    color: #337ab7; 
+    cursor: pointer;
+}

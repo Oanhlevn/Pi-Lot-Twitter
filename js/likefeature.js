@@ -23,9 +23,9 @@ let updateTweetList = () => {
                  ${insertHashtag(reTwsObj.content)}</p>` : ''}
                  <p class="font-italic" id='body'>${moment(tws.publishAt).fromNow()}</p>
         <ul class="nav nav-pills nav-pills-custom">
-            <li> <a id="retweet-btn-${tws.id}" onclick="reTws(${tws.id})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
-            <li> <a id="like-btn-${tws.id}" onclick="likeTws(${tws.id})" href="#"> Like <span class="glyphicon glyphicon-star"> ${tws.like}</span></a> </li>
-            <li> <a id="delete-btn-${tws.id}" onclick="deleteTws(${tws.id})" href="#" style="color:red"> Delete <span class="glyphicon glyphicon-remove"></span></a> </li>
+            <li> <a id="retweet-btn-${tws.id}" onclick="reTws(${tws.id})" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
+            <li> <a id="like-btn-${tws.id}" onclick="likeTws(${tws.id})"> Like <span class="glyphicon glyphicon-star"> ${tws.like}</span></a> </li>
+            <li> <a id="delete-btn-${tws.id}" onclick="deleteTws(${tws.id})" style="color:red"> Delete <span class="glyphicon glyphicon-remove"></span></a> </li>
         </ul>
             </div>
         </div>
@@ -47,9 +47,9 @@ updateRetweet = (retweetValue, tweetValue) => {
                 <p  class='border rounded p-2'><b>${retweetValue.user.name}</b> ${'@' + retweetValue.user.name.split(" ").join("").toLowerCase()} <br/> ${insertHashtag(retweetValue.content)}</p>
                 <p class="font-italic">${moment(d).fromNow()}</p>
                 <ul class="nav nav-pills nav-pills-custom">
-                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" href="#" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
-                    <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})" href="#"> Like <span class="glyphicon glyphicon-star"> 0 Like </span></a> </li>
-                    <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" href="#" style="color:red"> Delete <span class="glyphicon glyphicon-remove"></span></a> </li>
+                    <li> <a id="retweet-btn-${newTwsid}" onclick="reTws(${newTwsid})" > Retweet <span class="glyphicon glyphicon-retweet"></span></a> </li>
+                    <li> <a id="like-btn-${newTwsid}" onclick="likeTws(${newTwsid})"> Like <span class="glyphicon glyphicon-star"> 0 Like </span></a> </li>
+                    <li> <a id="delete-btn-${newTwsid}" onclick="deleteTws(${newTwsid})" style="color:red"> Delete <span class="glyphicon glyphicon-remove"></span></a> </li>
                 </ul>
             </div>
         </div>
