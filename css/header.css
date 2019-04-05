@@ -1,0 +1,96 @@
+body{
+    background: #e6ecf0;}
+#logo{
+    background-image: url('../images/pi-lot-logo.png');
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+}
+
+header {
+    background: #007bff;
+}
+
+#profile, #trends, #avatar, #footer, #followthem {
+    background: white;
+}
+
+#cover{
+    height:100px;
+    background-image: url('../images/cover_photo.jpg');
+    background-size: cover;
+
+}
+
+#avatar img{
+    width: 80px ;
+    height: 80px;
+    border-radius: 50%;
+    top: -40px;
+    left:  8px;
+    background: white;
+    border: 5px solid white;
+}
+
+ul{
+    list-style: none;
+    padding-left:10px; 
+    font-size: 85%
+}
+
+#trends ul a{
+    font-weight: bold;
+}
+#footer ul{
+    display: flex;
+    line-height: 18px;
+    flex-wrap: wrap;
+}
+.twsaccount{
+    border-top: 1px solid #d8d8d8;
+}
+.Footer-link, .copyright{
+    color: #657786;
+    padding-right: 8px;
+    font-size: 12px;
+}
+.name a{
+    color: black;
+}
+.avatar{
+    width: 70px;
+    height: 70px;
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 7px
+}
+.followbtn a {
+    font-size: 13px;
+    text-align: center;
+    padding: 7px 20px;
+    border: 1px solid #1DA1F2;
+    border-radius: 25px;
+    font-weight:600;
+    text-decoration: none;
+}
+
+.followbtn a:hover{
+    background-color: #E8F5FD;
+}
+    
+a{
+    text-decoration: none;
+}
+
+#tweet-list .avatar{
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    padding: 0;
+}
+
+#tweet-list a {
+    color: #337ab7; 
+    cursor: pointer;
+}
